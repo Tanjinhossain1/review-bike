@@ -18,9 +18,12 @@ const Home = () => {
                     <img src="https://im.rediff.com/getahead/2018/jul/06kawasaki-ninja-h2.jpg" alt="" />
                 </div>
             </div>
-        {
-            reviews.map(review => <Review key={review.id} review={review}></Review>)
-        }
+            <h1 className='text-center text-3xl mt-16'>Total Review: ({reviews.slice(0, 3).length})</h1>
+            <div className='grid md:grid-cols-2 lg:grid-cols-3'>
+                {
+                    reviews.slice(0, 3).map(review => <Review key={review.id} review={review}></Review>)
+                }
+            </div>
         </div>
     );
 };
