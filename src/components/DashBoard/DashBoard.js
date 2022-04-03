@@ -1,17 +1,27 @@
-import React, { useEffect, useState } from 'react';
+import React, { createContext, useEffect, useState } from 'react';
+import AreaCharts from '../AreaCharts/AreaCharts';
+import ComposedCharts from '../ComposedCharts/ComposedCharts';
+import FunnelCharts from '../FunnelCharts/FunnelCharts';
+import RadarCharts from '../RadarCharts/RadarCharts';
 
+export const sendChartData = createContext('send data')
 const DashBoard = () => {
     const [chartData, setChartData] = useState([]);
-    useEffect(()=>{
+    useEffect(() => {
         fetch('data.json')
-        .then(res => res.json())
-        .then(data => setChartData(data))
+            .then(res => res.json())
+            .then(data => setChartData(data))
     }, [])
-    console.log(chartData)
+
     return (
-        <div>
-            <h1>hi i am daha</h1>
-        </div>
+        <sendChartData.Provider value={chartData}>
+            <div className='ml-12 mt-12 grid lg:grid-cols-2 '>
+                <AreaCharts></AreaCharts>
+                <ComposedCharts></ComposedCharts>
+                <RadarCharts></RadarCharts>
+                <FunnelCharts></FunnelCharts>
+            </div>
+        </sendChartData.Provider>
     );
 };
 
