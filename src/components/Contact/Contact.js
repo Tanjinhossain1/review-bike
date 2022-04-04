@@ -10,7 +10,9 @@ const Contact = () => {
         setProblem(text)
 
     }
-    console.log(problem.length)
+    const removeProblem = () =>{
+        setProblem([])
+    }
     return (
         <div>
             <div>
@@ -25,8 +27,11 @@ const Contact = () => {
                     </div>
                 </div>
                 <div>
-                    <p className='text-xl w-2/4 mx-auto mt-12'>{problem}</p>
+                    <p className='text-xl text-center mt-12'>{problem}</p>
                 </div>
+              <div className='text-center mt-6'>
+              {problem.length >= 1 && <button onClick={removeProblem} className='border-2 border-blue-400 text-white font-semibold rounded-xl  bg-blue-200 py-2 px-6 hover:text-black hover:bg-white'>Remove</button>}
+              </div>
             </div>
             <h2 className='mt-56 text-center text-4xl text-gray-400'>And our contact number: (01861557343)</h2>
         </div>
