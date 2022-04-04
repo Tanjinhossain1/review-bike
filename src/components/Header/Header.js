@@ -16,6 +16,9 @@ const Header = () => {
             <div className='mr-12'>
                 <NavLink className={({ isActive }) => isActive ? ' border-b-4 font-semibold border-orange-600   text-orange-700' : 'font-semibold border-b-4 '} to='/blogs'>BLOGS</NavLink>
             </div>
+            <div className='mr-12'>
+                <NavLink className={({ isActive }) => isActive ? ' border-b-4 font-semibold border-orange-600   text-orange-700' : 'font-semibold border-b-4 '} to='/about'>ABOUT</NavLink>
+            </div>
         </div>
     );
 };
