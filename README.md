@@ -8,8 +8,6 @@
 
  “*” 3. And i added the Dashboard this page have some chart and i use reCharts. I use four charts on this reCharts. I use FunnelChart, RadarCharts, AreaCharts, ComposedCharts .
 
-<<<<<<< HEAD
  “*” 4. Added a Blog and this page have some question and answer .
-=======
- “*” 4. Added a Blog and this page have some question and answer .
->>>>>>> 7a2c66a384e3305c0bdb884e63e57dc383d5ffe9
+
+
