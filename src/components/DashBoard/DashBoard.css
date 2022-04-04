@@ -1,0 +1,14 @@
+@media screen and (min-width: 1023px ) and (max-width: 1550px) {
+    .charts-responsive{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        width: 600px;
+        
+    }
+}
+@media screen and (min-width: 1555px ) and (max-width: 3000px) {
+    .charts-responsive{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);  
+    }
+}

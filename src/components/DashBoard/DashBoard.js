@@ -3,6 +3,7 @@ import AreaCharts from '../AreaCharts/AreaCharts';
 import ComposedCharts from '../ComposedCharts/ComposedCharts';
 import FunnelCharts from '../FunnelCharts/FunnelCharts';
 import RadarCharts from '../RadarCharts/RadarCharts';
+import './DashBoard.css'
 
 export const sendChartData = createContext('send data')
 const DashBoard = () => {
@@ -15,7 +16,7 @@ const DashBoard = () => {
 
     return (
         <sendChartData.Provider value={chartData}>
-            <div className='ml-12 mt-12 grid lg:grid-cols-2 '>
+            <div className='ml-12 mt-12  charts-responsive '>
                 <AreaCharts></AreaCharts>
                 <ComposedCharts></ComposedCharts>
                 <RadarCharts></RadarCharts>

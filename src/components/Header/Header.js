@@ -4,8 +4,6 @@ import {  MenuIcon, XIcon } from '@heroicons/react/solid'
 
 const Header = () => {
     const [open, setOpen] = useState(false);
-    
-    console.log(open)
     return (
         <div className='mt-4'>
           
@@ -14,7 +12,7 @@ const Header = () => {
                 {open ? <XIcon></XIcon> : <MenuIcon></MenuIcon>}
             </div>
 
-            <div className={`md:flex  lg:static text-2xl  md:static justify-center w-full absolute ${open ? 'top-10 text-center relative': 'top-[-180px]'}`}>
+            <div className={`md:flex  lg:static text-2xl text-center md:static justify-center w-full absolute duration-700 ease-in ${open ? 'top-10 text-center relative': 'top-[-180px]'}`}>
                 <div className='mr-12'>
                     <NavLink className={({ isActive }) => isActive ? ' border-b-4 border-orange-600 font-semibold text-orange-700' : 'font-semibold border-b-4 '} to='/'>Home</NavLink>
                 </div>

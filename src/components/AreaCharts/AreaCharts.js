@@ -5,7 +5,7 @@ import { sendChartData } from '../DashBoard/DashBoard';
 const AreaCharts = () => {
     const chartData = useContext(sendChartData)
     return (
-        <div className='sm:mb-12 md:mb-12'>
+        <div className='sm:mb-12 md:mb-12 m-6'>
             <AreaChart width={800} height={400} data={chartData}
                 margin={{ top: 10, right: 30, left: 0, bottom: 0 }}>
                 <defs>

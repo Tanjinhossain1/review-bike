@@ -6,7 +6,7 @@ const FunnelCharts = () => {
     const chartData = useContext(sendChartData)
 
     return (
-        <div>
+        <div className='m-6'>
             <FunnelChart width={730} height={550}>
                 <Tooltip />
                 <Funnel

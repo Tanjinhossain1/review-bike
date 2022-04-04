@@ -5,7 +5,7 @@ import { sendChartData } from '../DashBoard/DashBoard';
 const ComposedCharts = () => {
     const chartData = useContext(sendChartData)
     return (
-        <div className='sm:mb-12 md:mb-12'>
+        <div className='sm:mb-12 md:mb-12 m-6'>
             <ComposedChart width={800} height={400} data={chartData}>
                 <XAxis dataKey="month" />
                 <YAxis />
